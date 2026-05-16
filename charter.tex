@@ -5,7 +5,7 @@
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Machine Learning aplicado a la resolución de ecuaciones de cinemática inversa} 
+\titulo{Machine learning aplicado a la resolución de ecuaciones de cinemática inversa} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -29,7 +29,7 @@
 \empresaCliente{Empresa del cliente}
  
 \fechaINICIO{28 de abril de 2026}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{20 de junio de 2026} 	%Fecha de final de cursada de GdP
+\fechaFINALPlan{18 de junio de 2026} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{20 de diciembre de 2026}	%Fecha de defensa pública del trabajo final
 
 
@@ -105,9 +105,9 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-Un robot puede definirse de forma muy simplista como: una máquina compuesta por actuadores y sensores, mediante los que puede interactuar con el mundo. Esta forma reduccionista permite ver uno de los desafíos que la robótica enfrenta, que es la de responder a la pregunta ¿Cómo debo configurar mis actuadores para lograr la posición deseada? La respuesta a esta pregunta es la cinemática inversa (IK).
+Un robot puede definirse de forma muy simplista como una máquina compuesta por actuadores y sensores, mediante los que puede interactuar con el mundo. Esta forma reduccionista permite ver uno de los desafíos que la robótica enfrenta, que es la de responder a la pregunta ¿Cómo debo configurar mis actuadores para lograr la posición deseada? La respuesta a esta pregunta es la cinemática inversa (IK).
 
-Encontrar dicha respuesta puede resultar muy complejo cuando consideramos robots de muchos grados de libertad, aún más si extendemos la discusión a robots flexibles, los cuales teóricamente cuentan con infinitos de ellos. Esto último motiva la idea de encontrar métodos que permitan simplificar esta tarea, lo que directamente incurre en la disminución de tiempos de desarrollo. En la figura \ref{fig:morfologia} se observa el tipo de robot sobre el que se realizará el proyecto, este se compone de 4 tendones y 1 núcleo de nitinol que puede ser introducido o retraído para variar la rigidez de su cuerpo.
+Encontrar dicha respuesta puede resultar muy complejo cuando consideramos robots de muchos grados de libertad, aún más si extendemos la discusión a robots flexibles, que teóricamente cuentan con infinitos de ellos. Esto último motiva la idea de encontrar métodos que permitan simplificar esta tarea, lo que directamente incurre en la disminución de tiempos de desarrollo. En la figura \ref{fig:morfologia} se observa el tipo de robot sobre el que se realizará el proyecto, este se compone de 4 tendones y 1 núcleo de nitinol que puede ser introducido o retraído para variar la rigidez de su cuerpo.
 
 \begin{figure}[htpb]
 \centering 
@@ -117,7 +117,7 @@ Encontrar dicha respuesta puede resultar muy complejo cuando consideramos robots
 \end{figure}
 
 
-Con el fin de abordar esta problemática se propone evaluar la aplicación de \textit{Machine Learning} (ML) para obtener un modelo de IK que produzca resultados aceptables en términos de precisión y tiempos de computo. En la figura \ref{fig:diag_bloques} se observa el sistema propuesto, este aprenderá de un conjunto de datos que incluye tanto posiciones como estado de actuadores y luego deberá ser capaz de brindar la configuración necesaria para lograr una posición deseada.
+Con el fin de abordar esta problemática se propone evaluar la aplicación de \textit{Machine Learning} (ML) para obtener un modelo de IK que produzca resultados aceptables en términos de precisión y tiempos de cómputo. En la figura \ref{fig:diag_bloques} se observa el sistema propuesto, este aprenderá de un conjunto de datos que incluye tanto posiciones como estado de actuadores y luego deberá ser capaz de brindar la configuración necesaria para lograr una posición deseada.
 
 
 \begin{figure}[htpb]
@@ -143,19 +143,17 @@ Abordar esta problemática utilizando ML es algo que se ha explorado previamente
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Cliente       & Terna de Jurados TF       &FIUBA	& Jurados posgrado       	\\ \hline
+Cliente       & Cristian Luciano       &Robotron & CTO\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
-Colaborador & Cristian Luciano & Robotron & CTO \\ \hline
 Usuario Final & Empresas de desarrollo de aplicaciones robóticas & - & - \\ \hline
 \end{tabularx}
 \end{table}
 
 
 \begin{itemize}
-	\item Orientador: el \supname es director del laboratorio de sistemas inteligentes de la Universidad Nacional de San Luis y será de ayuda para armar el modelo e implementarlo.
-	\item Colaborador: Cristian Luciano será de ayuda para guiar el desarrollo debido a su conocimiento en el uso de robots flexibles.
-	\item Usuario Final: Las empresas que desarrollen aplicaciones afines requerirán documentación apropiada.
+	\item Orientador: el \supname\ es director del laboratorio de sistemas inteligentes de la Universidad Nacional de San Luis y será de ayuda para armar el modelo e implementarlo.
+	\item Usuario Final: las empresas que desarrollen aplicaciones afines requerirán documentación apropiada.
 
 \end{itemize}
 
@@ -202,57 +200,51 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
-
 \begin{enumerate}
 	\item Requerimientos funcionales:
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item El sistema debe recibir una coordenada en el espacio (X,Y,Z).
+			\item El sistema debe devolver una configuración de actuadores (m1, m2, m3, m4, m5).
+			\item El usuario debe poder visualizar el comportamiento esperado del robot.
+			\item El sistema debe indicar la certidumbre de la predicción.
+			\item El sistema debe poder ser reentrenado fácilmente.
+			\item El sistema debe tener una exactitud de al menos 3 mm.
 		\end{enumerate}
 	\item Requerimientos de documentación:
 		\begin{enumerate}
-			\item Requerimiento 1.
-			\item Requerimiento 2 (prioridad menor)
+			\item Se deberá detallar la incorporación en otros sistemas.
+			\item Se deberá especificar el flujo de reentrenamiento
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+	\item Requerimiento de testing:
+		\begin{enumerate}
+			\item Se deberá corroborar la integridad de los datos de entrenamiento.
+			\item Se deberá corroborar la consistencia de las APIs.
+		\end{enumerate}
+	\item Requerimientos de la interfaz:
+		\begin{enumerate}
+			\item La interfaz deberá mostrar el estado del robot.
+			\item La interfaz deberá permitir ingresar el objetivo.
+			\item La interfaz deberá informar metricas de rendimiento del sistema.
+		\end{enumerate}
+	\item Requerimientos interoperabilidad:
+		\begin{enumerate}
+			\item El sistema deberá tener una API web.
+			\item El sistema deberá tener una API de python.
+			\item El sistema debera tener una API de ROS2.
+		\end{enumerate}
 \end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
-
-El formato propuesto es: 
 \begin{enumerate}
 \item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
 
 \textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
 \end{enumerate}
-\end{consigna}
+
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
