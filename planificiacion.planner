@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<project name="" company="" manager="" phase="" project-start="20260601T000000Z" mrproject-version="2" calendar="1">
+  <properties/>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Working" description="A default working day"/>
+      <day-type id="1" name="Nonworking" description="A default non working day"/>
+      <day-type id="2" name="Use base" description="Use day from base calendar"/>
+    </day-types>
+    <calendar id="1" name="Default">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="0"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0830" end="1200"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+    </calendar>
+    <calendar id="2" name="Default">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="1.1 Implementaci&#xF3;n del modelo de cinematica directa" note="" work="144000" duration="144000" start="20260601T000000Z" end="20260614T100000Z" work-start="20260601T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+    <task id="2" name="1.2 Generaci&#xF3;n de datos" note="" work="72000" duration="72000" start="20260614T100000Z" end="20260621T090000Z" work-start="20260614T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="1" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="3" name="1.3 Validaci&#xF3;n de datos obtenidos" note="" work="72000" duration="72000" start="20260621T090000Z" end="20260626T113000Z" work-start="20260621T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="2" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="4" name="2.1 An&#xE1;lisis del estado del arte" note="" work="259200" duration="259200" start="20260601T000000Z" end="20260624T103000Z" work-start="20260601T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="5" name="Fin de preparaci&#xF3;n" note="" work="0" duration="0" start="20260626T113000Z" end="20260626T113000Z" work-start="20260626T113000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="3" type="FS"/>
+        <predecessor id="1" predecessor-id="4" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="6" name="2.2 Definici&#xF3;n del pipeline de entrenamiento" note="" work="72000" duration="72000" start="20260626T113000Z" end="20260703T103000Z" work-start="20260626T113000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="4" type="FS"/>
+        <predecessor id="1" predecessor-id="3" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="7" name="2.3 Implementaci&#xF3;n de alternativas" note="" work="144000" duration="144000" start="20260703T103000Z" end="20260716T120000Z" work-start="20260703T103000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="6" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="8" name="2.4 Evaluaci&#xF3;n de alternativas y selecci&#xF3;n" note="" work="144000" duration="144000" start="20260716T120000Z" end="20260730T100000Z" work-start="20260717T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="7" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="9" name="2.5 Entrenamiento del modelo" note="" work="72000" duration="72000" start="20260730T100000Z" end="20260806T090000Z" work-start="20260730T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="8" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="10" name="2.6 Optimizaci&#xF3;n del modelo" note="" work="144000" duration="144000" start="20260806T090000Z" end="20260819T103000Z" work-start="20260806T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="9" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="11" name="2.7 Validaci&#xF3;n del modelo" note="" work="144000" duration="144000" start="20260819T103000Z" end="20260901T120000Z" work-start="20260819T103000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="10" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="12" name="3.1 Desarrollo de API Web" note="" work="72000" duration="72000" start="20260901T120000Z" end="20260908T110000Z" work-start="20260902T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="11" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="13" name="3.2 Desarrollo de API python" note="" work="72000" duration="72000" start="20260908T110000Z" end="20260915T100000Z" work-start="20260908T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="12" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="14" name="3.3 Desarrollo de API ROS2" note="" work="72000" duration="72000" start="20260915T100000Z" end="20260922T090000Z" work-start="20260915T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="13" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="15" name="3.4 Desarrollo de interfaz gr&#xE1;fica" note="" work="108000" duration="108000" start="20260922T090000Z" end="20261001T110000Z" work-start="20260922T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="14" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="16" name="Fin de desarrollo" note="" work="0" duration="0" start="20261001T110000Z" end="20261001T110000Z" work-start="20261001T110000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="15" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="17" name="4.1 Evaluaci&#xF3;n de usabilidad en aplicacion de tiempo real" note="" work="72000" duration="72000" start="20261001T110000Z" end="20261008T100000Z" work-start="20261001T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="15" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="18" name="4.2 Evaluaci&#xF3;n de exactitud" note="" work="72000" duration="72000" start="20261008T100000Z" end="20261015T090000Z" work-start="20261008T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="17" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="19" name="4.3 Evaluaci&#xF3;n de facilidad de entrenamiento" note="" work="72000" duration="72000" start="20261015T090000Z" end="20261021T113000Z" work-start="20261015T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="18" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="20" name="4.4 Evaluaci&#xF3;n de interfaces" note="" work="72000" duration="72000" start="20261021T113000Z" end="20261028T103000Z" work-start="20261021T113000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="19" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="21" name="4.5 Evaluac&#xED;on de desempe&#xF1;o en casos extremos" note="" work="72000" duration="72000" start="20261028T103000Z" end="20261104T093000Z" work-start="20261028T103000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="20" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="22" name="Fin de evaluaci&#xF3;n" note="" work="0" duration="0" start="20261104T093000Z" end="20261104T093000Z" work-start="20261104T093000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="21" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="23" name="5.1 Elaboraci&#xF3;n de manual de usuario" note="" work="54000" duration="54000" start="20261104T093000Z" end="20261109T103000Z" work-start="20261104T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="21" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="24" name="5.2 Documentaci&#xF3;n de c&#xF3;digo fuente" note="" work="33300" duration="33300" start="20261109T103000Z" end="20261112T091500Z" work-start="20261109T103000Z" percent-complete="2" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="23" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="25" name="5.3 Redacci&#xF3;n de informe de avance" note="" work="108000" duration="1339200" start="20260601T000000Z" end="20261002T093000Z" work-start="20260601T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+    <task id="26" name="5.4 Redacci&#xF3;n de memoria final" note="" work="108000" duration="1713600" start="20260601T000000Z" end="20261105T120000Z" work-start="20260601T083000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+    <task id="27" name="5.5 Preparaci&#xF3;n de defensa p&#xFA;blica" note="" work="54000" duration="54000" start="20261112T091500Z" end="20261117T101500Z" work-start="20261112T091500Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="24" type="FS"/>
+        <predecessor id="1" predecessor-id="25" type="FS"/>
+        <predecessor id="1" predecessor-id="26" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="28" name="Finalizaci&#xF3;n" note="" work="0" duration="0" start="20261117T101500Z" end="20261117T101500Z" work-start="20261117T101500Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="27" type="FS"/>
+      </predecessors>
+    </task>
+    <task id="29" name="Presentaci&#xF3;n" note="" work="0" duration="0" start="20261201T000000Z" end="20261201T000000Z" work-start="20261201T083000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+      <constraint type="must-start-on" time="20261201T000000Z"/>
+    </task>
+  </tasks>
+  <resource-groups/>
+  <resources/>
+  <allocations/>
+</project>

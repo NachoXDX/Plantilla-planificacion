@@ -62,6 +62,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1      & Se completa hasta el punto 5 inclusive                & {10} de {mayo} de 2026 \\ \hline
 2      & Se completa hasta el punto 9 inclusive				 & {17} de {mayo} de 2026 \\ \hline
 3      & Se completa hasta el punto 12 inclusive				 & {23} de {mayo} de 2026 \\ \hline
+4      & Se completa hasta el punto 15 inclusive				 & {31} de {mayo} de 2026 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
@@ -255,7 +256,7 @@ Para el cálculo de los \textit{story points} se consideró la complejidad, difi
 
 \textit{Story points}: 8 (complejidad: 2, dificultad: 1, incertidumbre: 4)
 
-\item ``Como usuario quiero contar con una interfaz grafica en la que pueda interactuar con el sistema para hacer un uso más fácil del mismo."
+\item ``Como usuario quiero contar con una interfaz gráfica en la que pueda interactuar con el sistema para hacer un uso más fácil del mismo."
 
 \textit{Story points}: 5 (complejidad: 1, dificultad: 1, incertidumbre: 3)
 
@@ -263,7 +264,7 @@ Para el cálculo de los \textit{story points} se consideró la complejidad, difi
 
 \textit{Story points}: 13 (complejidad: 3, dificultad: 3, incertidumbre: 3)
 
-\item ``Como ingeniero quiero que el sistema actué de forma segura cuando las posiciones son inalcanzables para evitar daños materiales."
+\item ``Como ingeniero quiero que el sistema actue de forma segura cuando las posiciones son inalcanzables para evitar daños materiales."
 
 \textit{Story points}: 8 (complejidad: 2, dificultad: 2, incertidumbre: 3)
 
@@ -342,11 +343,11 @@ Cantidad total de horas: 610 h.
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-Se observa en la figura \ref{fig:AoN} el diagrama de \textit{activity on node} con las tareas definidas en la sección anterior. El camino crítico está marcado con una línea de mayor espesor y su duración es de 410 h. El diagrama considera la posibilidad de paralelizar las actividades de redacción a medida que se avanza con las demás.
+Se observa en la figura \ref{fig:AoN} el diagrama de \textit{activity on node} con las tareas definidas en la sección anterior. El camino crítico está marcado con una línea de color rojo y su duración es de 410 h. El diagrama considera la posibilidad de paralelizar las actividades de redacción a medida que se avanza con las demás.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1\textwidth]{./Figuras/aon2.pdf}
+\includegraphics[width=1\textwidth]{./Figuras/aon.pdf}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
@@ -360,7 +361,7 @@ En la figura \ref{fig:diagGantt} se observa el diagrama de Gantt del proyecto ut
 \begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=1\textheight]{./Figuras/gantt2.pdf}
+\includegraphics[height=0.76\textheight]{./Figuras/gantt3.pdf}
 \caption{Diagrama de Gantt}
 \label{fig:diagGantt}
 \end{figure}
@@ -372,7 +373,7 @@ En la figura \ref{fig:diagGantt} se observa el diagrama de Gantt del proyecto ut
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-El presupuesto del proyecto se detalla en dólares estadounidenses. Considerando un tasa de 1.400 ARS por USD, el total expresado en pesos argentinos es de 18.956.000 ARS.
+El presupuesto del proyecto se detalla en dólares estadounidenses. Considerando una tasa de 1.408 ARS por USD, obtenida según la cotización del banco Nación el día 29 de mayo de 2026, el total expresado en pesos argentinos es de 19.064.320 ARS.
 \begin{table}[htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
@@ -416,31 +417,56 @@ Suscripción mensual a Claude Pro & 6 & 20 USD & 120 USD \\ \hline
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+a) Identificación de los riesgos y estimación de sus consecuencias:
  
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
+\textbf{Riesgo 1.} Implementación errónea del modelo de cinemática directa. 
 \begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item \textbf{Severidad (S):} 8.
+	
+	Debido a que el modelo dependerá completamente de la integridad de los datos generados, una falla no detectada pondrá en compromiso todo el desarrollo subsiguiente.
+	\item \textbf{Ocurrencia (O):} 5.
+	
+	La falta de experiencia a la hora de hacer este tipo de actividad supone una probabilidad de ocurrencia media.
 \end{itemize}   
 
-Riesgo 2:
+\textbf{Riesgo 2.} Elevado tiempo de entrenamiento del modelo.
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item \textbf{Severidad (S):} 6.
+	
+	Si el modelo resulta ser muy demandante en recursos para ser entrenado, se prolongará el tiempo que inicialmente fue estipulado.
+	\item \textbf{Ocurrencia (O):} 3.
+	
+	Es difícil estimar su probabilidad de ocurrencia al desconocer el tipo de modelo que será utilizado. De todos modos, considerando el volumen de datos que se pretende usar, esto quizá no sea muy probable.
 \end{itemize}
 
-Riesgo 3:
+\textbf{Riesgo 3.} Mal diseño de interfaces.
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item \textbf{Severidad (S):} 7.
+	
+	 Si no se logra una fácil incorporación del proyecto, su uso sera limitado.
+	\item \textbf{Ocurrencia (O):} 6.
+	
+	Debido a que no se focaliza su implementación en un sistema ya definido, es probable que suceda.
+\end{itemize}
+
+\textbf{Riesgo 4.} Inusabilidad en aplicaciones de tiempo real.
+\begin{itemize}
+	\item \textbf{Severidad (S):} 9.
+	
+	Si el tiempo de procesamiento del modelo es muy elevado, perderá casi en su totalidad el propósito.
+	\item \textbf{Ocurrencia (O):} 2.
+	
+	Se tendrá en consideración a la hora de seleccionar alternativas, por lo que es improbable que suceda.
+\end{itemize}
+
+\textbf{Riesgo 5.} Fallas detectadas en etapa de evaluación.
+\begin{itemize}
+	\item \textbf{Severidad (S):} 6.
+	
+	Si al momento de realizar la evaluación general del proyecto se observan incumplimientos, se deberán modificar componentes que pueden resultar en la incompatibilidad con otros.
+	\item \textbf{Ocurrencia (O):} 2.
+	
+	Debido a que se puede modularizar el desarrollo, se puede tener en mente la intercompatibilidad desde un principio y prevenir su ocurrencia.
 \end{itemize}
 
 
@@ -452,77 +478,125 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+  1. Implementación errónea del modelo de cinemática directa.     & 8  & 5  & 40    & 8   & 2   & 16     \\ \hline
+   2. Elevado tiempo de entrenamiento del modelo.    & 6  & 3  & 18    &    &    &      \\ \hline
+    3. Mal diseño de interfaces.   & 7  & 6  & 42    & 7   & 2   & 14     \\ \hline
+     4. Inusabilidad en aplicaciones de tiempo real.  & 9  & 2  & 18    &    &    &      \\ \hline
+      5. Fallas detectadas en etapa de evaluación. & 6  & 2  & 12    &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 30.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
+\textbf{Riesgo 1.} Se hará una evaluación de los datos obtenidos en el momento en que se están generando utilizando herramientas de visualización.
   \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+	\item \textbf{Severidad (S*):} 8.
+	
+	La severidad no se ve afectada.
+	\item \textbf{Ocurrencia (O*):} 2.
+	
+	Si se toma precaución en esta etapa, validando los datos obtenidos, es muy difícil que un error se propague.
 	\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+\textbf{Riesgo 3.} Adoptar protocolos y tecnologías estandarizadas.
+  \begin{itemize}
+	\item \textbf{Severidad (S*):} 7.
+	
+	La severidad no se ve afectada.
+	\item \textbf{Ocurrencia (O*):} 2.
+	
+	Al forzar la selección de interfaces estándar es muy probable que la implementación pase a ser una tarea trivial.
+	\end{itemize}
 
-\end{consigna}
+
 
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
+En esta sección se presentan los requisitos más relevantes junto a sus acciones de verificación y validación.
 
 \begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
 
+\item \textbf{Req 1.1: El sistema deberá recibir una coordenada en el espacio (X,Y,Z).}
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
+	\item \textbf{Verificación:} se incluirán pruebas unitarias que verifiquen que el sistema solo es capaz de recibir datos de la forma deseada y que responda de forma controlada cuando no.
+	\item \textbf{Validación:} se realizarán pruebas de usuario donde un operador introducirá coordenadas a través de la interfaz para confirmar que el sistema acepta la orden.
+\end{itemize}
+
+\item \textbf{Req 1.2: El sistema deberá devolver una configuración de actuadores (m1, m2, m3, m4, m5).}
+\begin{itemize}
+	\item \textbf{Verificación:} se incluirán pruebas unitarias que verifiquen que el sistema produce datos de la forma deseada, tanto en casos de posiciones validas como invalidas.
+	\item \textbf{Validación:} se realizarán pruebas de usuario donde un operador introducirá coordenadas a través de la interfaz para confirmar que se produce la salida esperada.
+\end{itemize}
+
+\item \textbf{Req 1.4: El sistema deberá indicar la certidumbre de la predicción.}
+\begin{itemize}
+	\item \textbf{Verificación:} se implementarán pruebas unitarias para verificar que el algoritmo nunca arroja valores de certidumbre fuera del rango entre 0 y 1.
+	\item \textbf{Validación:} se realizarán pruebas de usuario donde un operador introducirá coordenadas a través de la interfaz para confirmar que se recibe la certidumbre de la salida obtenida.
+\end{itemize}
+
+\item \textbf{Req 1.5: El sistema deberá poder ser re entrenado fácilmente.}
+\begin{itemize}
+	\item \textbf{Verificación:} se definirá claramente el \textit{pipeline} de entrenamiento y se automatizará mediante \textit{scripts} para verificar que el modelo responde sin errores al recibir nuevos conjuntos de datos.
+	\item \textbf{Validación:} se solicitará que un colega entrene el modelo con un conjunto de datos propio para luego evaluar su experiencia en el proceso.
+\end{itemize}
+
+\item \textbf{Req 1.6: El sistema deberá tener una exactitud de al menos 3 mm.}
+\begin{itemize}
+	\item \textbf{Verificación:} se ajustará el modelo usando como métrica al error medio cuadrático y se rechazarán aquellos que estén por encima del valor especificado.
+	\item \textbf{Validación:} se contrastarán salidas producidas por el sistema con el modelo de cinemática directa para evaluar su grado de exactitud.
+\end{itemize}
+
+\item \textbf{Req 3.1: Se deberá corroborar la integridad de los datos de entrenamiento.}
+\begin{itemize}
+	\item \textbf{Verificación:} se realizará un análisis exploratorio de datos para identificar posibles errores.
+	\item \textbf{Validación:} se presentará un tablero con gráficos que permitan visualmente detectar errores.
+\end{itemize}
+
+\item \textbf{Req 4.1: La interfaz deberá mostrar el estado del robot.}
+\begin{itemize}
+	\item \textbf{Verificación:} se medirá la latencia desde que se emite un cambio de estado en el robot hasta que este se muestra en la interfaz, verificando que este se mantenga por debajo de los 300 ms.
+	\item \textbf{Validación:} se solicitará a un usuario que interactué con la interfaz y evalué si esta representa al robot de manera satisfactoria.
+\end{itemize}
+
+\item \textbf{Req 5.1: El sistema deberá tener una API web.}
+\begin{itemize}
+	\item \textbf{Verificación:} se realizarán pruebas unitarias a los distintos \textit{endpoints} de la API para verificar su correctitud. 
+	\item \textbf{Validación:} se solicitará a un colega que implemente el sistema a través de la API web, utilizando solo como referencia la documentación.
+\end{itemize}
+
+\item \textbf{Req 5.2: El sistema deberá tener una API Python.}
+\begin{itemize}
+	\item \textbf{Verificación:} se estructurará el paquete según lo establecido en las normas PEP. Además se incluirán pruebas unitarias para verificar la correcta implementación.
+	\item \textbf{Validación:} se solicitará a un colega que implemente el sistema a través de la API de Python, utilizando solo como referencia la documentación.
+\end{itemize}
+
+\item \textbf{Req 5.3: El sistema deberá tener una API ROS2.}
+\begin{itemize}
+	\item \textbf{Verificación:} se estructurará el paquete según el estándar de ROS2. Además se incluirán pruebas unitarias para verificar la correcta implementación.
+	\item \textbf{Validación:} se solicitará a un colega que implemente el sistema a través de la API de ROS2, utilizando solo como referencia la documentación.
 \end{itemize}
 
 \end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
-
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
-
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
-
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-	  - Indicar esto y quién financiará los gastos correspondientes.
+	\item \textbf{Revisión del plan de proyecto original:}\\
+	 Esta tarea será llevada a cabo por el alumno y consistirá en evaluar el cronograma y la duración de tareas detalladas en el plan de proyecto, considerando su grado de similitud con la realidad. Por otro lado, se presentará una planilla donde se muestre el grado de cumplimiento de los requerimientos propuestos.
+	\item \textbf{Identificación de las técnicas y procedimientos útiles e inútiles:}\\
+	 Esta tarea será llevada a cabo por el alumno y detallará todas las alternativas implementadas a la hora de seleccionar el modelo final. Deberá registrar cada una junto a los motivos por los que se aceptó o descartó.
+	\item \textbf{Acto de agradecimiento:}\\
+	 Esta tarea será llevada a cabo por el alumno y tendrá lugar en el cierre de la defensa pública. Se reconocerán los aportes de cada colaborador y se les agradecerá por ello. No incurrirá en ningún gasto adicional.
 \end{itemize}
 
-\end{consigna}
 
 \end{document}
