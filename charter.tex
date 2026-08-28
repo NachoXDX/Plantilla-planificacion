@@ -19,8 +19,8 @@
 \autor{Ing. Pedro Ignacio Rubiolo}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Dr. Luis Omar Avila}
-\pertenenciaDirector{FICA} 
+\director{-}
+\pertenenciaDirector{-} 
 \codirector{} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
 \pertenenciaCoDirector{FIUBA}
 
@@ -63,6 +63,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 2      & Se completa hasta el punto 9 inclusive				 & {17} de {mayo} de 2026 \\ \hline
 3      & Se completa hasta el punto 12 inclusive				 & {23} de {mayo} de 2026 \\ \hline
 4      & Se completa hasta el punto 15 inclusive				 & {31} de {mayo} de 2026 \\ \hline
+5      & Se aplican las correcciones sugeridas sobre la revisión 4				 & {7} de {junio} de 2026 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
@@ -154,7 +155,7 @@ Usuario final & Empresas de desarrollo de aplicaciones robóticas & - & - \\ \hl
 
 
 \begin{itemize}
-	\item Orientador: el \supname\ es director del laboratorio de sistemas inteligentes de la Universidad Nacional de San Luis y será de ayuda para armar el modelo e implementarlo.
+	%\item Orientador: el \supname\ es director del laboratorio de sistemas inteligentes de la Universidad Nacional de San Luis y será de ayuda para armar el modelo e implementarlo.
 	\item Usuario final: las empresas que desarrollen aplicaciones afines requerirán documentación apropiada.
 	\item Cliente: Cristian Luciano ayudará a definir las especificaciones y será útil para asistir en decisiones de diseño ligadas a la usabilidad.
 
@@ -264,7 +265,7 @@ Para el cálculo de los \textit{story points} se consideró la complejidad, difi
 
 \textit{Story points}: 13 (complejidad: 3, dificultad: 3, incertidumbre: 3)
 
-\item ``Como ingeniero quiero que el sistema actue de forma segura cuando las posiciones son inalcanzables para evitar daños materiales."
+\item ``Como ingeniero quiero que el sistema actúe de forma segura cuando las posiciones son inalcanzables para evitar daños materiales."
 
 \textit{Story points}: 8 (complejidad: 2, dificultad: 2, incertidumbre: 3)
 
@@ -373,7 +374,7 @@ En la figura \ref{fig:diagGantt} se observa el diagrama de Gantt del proyecto ut
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-El presupuesto del proyecto se detalla en dólares estadounidenses. Considerando una tasa de 1.408 ARS por USD, obtenida según la cotización del banco Nación el día 29 de mayo de 2026, el total expresado en pesos argentinos es de 19.064.320 ARS.
+El presupuesto del proyecto se detalla en dólares estadounidenses. Considerando una tasa de 1.408 ARS por USD, obtenida según la cotización del Banco Nación el día 29 de mayo de 2026, el total expresado en pesos argentinos es de 19.064.320 ARS.
 \begin{table}[htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
@@ -419,52 +420,52 @@ Suscripción mensual a Claude Pro & 6 & 20 USD & 120 USD \\ \hline
 
 a) Identificación de los riesgos y estimación de sus consecuencias:
  
-\textbf{Riesgo 1.} Implementación errónea del modelo de cinemática directa. 
+Riesgo 1. Implementación errónea del modelo de cinemática directa. 
 \begin{itemize}
-	\item \textbf{Severidad (S):} 8.
+	\item Severidad (S): 8.
 	
 	Debido a que el modelo dependerá completamente de la integridad de los datos generados, una falla no detectada pondrá en compromiso todo el desarrollo subsiguiente.
-	\item \textbf{Ocurrencia (O):} 5.
+	\item Ocurrencia (O): 5.
 	
 	La falta de experiencia a la hora de hacer este tipo de actividad supone una probabilidad de ocurrencia media.
 \end{itemize}   
 
-\textbf{Riesgo 2.} Elevado tiempo de entrenamiento del modelo.
+Riesgo 2. Elevado tiempo de entrenamiento del modelo.
 \begin{itemize}
-	\item \textbf{Severidad (S):} 6.
+	\item Severidad (S): 6.
 	
 	Si el modelo resulta ser muy demandante en recursos para ser entrenado, se prolongará el tiempo que inicialmente fue estipulado.
-	\item \textbf{Ocurrencia (O):} 3.
+	\item Ocurrencia (O): 3.
 	
 	Es difícil estimar su probabilidad de ocurrencia al desconocer el tipo de modelo que será utilizado. De todos modos, considerando el volumen de datos que se pretende usar, esto quizá no sea muy probable.
 \end{itemize}
 
-\textbf{Riesgo 3.} Mal diseño de interfaces.
+Riesgo 3. Mal diseño de interfaces.
 \begin{itemize}
-	\item \textbf{Severidad (S):} 7.
+	\item Severidad (S): 7.
 	
 	 Si no se logra una fácil incorporación del proyecto, su uso sera limitado.
-	\item \textbf{Ocurrencia (O):} 6.
+	\item Ocurrencia (O): 6.
 	
 	Debido a que no se focaliza su implementación en un sistema ya definido, es probable que suceda.
 \end{itemize}
 
-\textbf{Riesgo 4.} Inusabilidad en aplicaciones de tiempo real.
+Riesgo 4. Inusabilidad en aplicaciones de tiempo real.
 \begin{itemize}
-	\item \textbf{Severidad (S):} 9.
+	\item Severidad (S): 9.
 	
 	Si el tiempo de procesamiento del modelo es muy elevado, perderá casi en su totalidad el propósito.
-	\item \textbf{Ocurrencia (O):} 2.
+	\item Ocurrencia (O): 2.
 	
 	Se tendrá en consideración a la hora de seleccionar alternativas, por lo que es improbable que suceda.
 \end{itemize}
 
-\textbf{Riesgo 5.} Fallas detectadas en etapa de evaluación.
+Riesgo 5. Fallas detectadas en etapa de evaluación.
 \begin{itemize}
-	\item \textbf{Severidad (S):} 6.
+	\item Severidad (S): 6.
 	
 	Si al momento de realizar la evaluación general del proyecto se observan incumplimientos, se deberán modificar componentes que pueden resultar en la incompatibilidad con otros.
-	\item \textbf{Ocurrencia (O):} 2.
+	\item Ocurrencia (O): 2.
 	
 	Debido a que se puede modularizar el desarrollo, se puede tener en mente la intercompatibilidad desde un principio y prevenir su ocurrencia.
 \end{itemize}
@@ -494,22 +495,22 @@ Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplic
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-\textbf{Riesgo 1.} Se hará una evaluación de los datos obtenidos en el momento en que se están generando utilizando herramientas de visualización.
+Riesgo 1. Se hará una evaluación de los datos obtenidos en el momento en que se están generando utilizando herramientas de visualización.
   \begin{itemize}
-	\item \textbf{Severidad (S*):} 8.
+	\item Severidad (S*): 8.
 	
 	La severidad no se ve afectada.
-	\item \textbf{Ocurrencia (O*):} 2.
+	\item Ocurrencia (O*): 2.
 	
 	Si se toma precaución en esta etapa, validando los datos obtenidos, es muy difícil que un error se propague.
 	\end{itemize}
 
-\textbf{Riesgo 3.} Adoptar protocolos y tecnologías estandarizadas.
+Riesgo 3. Adoptar protocolos y tecnologías estandarizadas.
   \begin{itemize}
-	\item \textbf{Severidad (S*):} 7.
+	\item Severidad (S*): 7.
 	
 	La severidad no se ve afectada.
-	\item \textbf{Ocurrencia (O*):} 2.
+	\item Ocurrencia (O*): 2.
 	
 	Al forzar la selección de interfaces estándar es muy probable que la implementación pase a ser una tarea trivial.
 	\end{itemize}
@@ -524,64 +525,64 @@ En esta sección se presentan los requisitos más relevantes junto a sus accione
 
 \begin{itemize} 
 
-\item \textbf{Req 1.1: El sistema deberá recibir una coordenada en el espacio (X,Y,Z).}
+\item Req 1.1. El sistema deberá recibir una coordenada en el espacio (X,Y,Z).
 \begin{itemize}
-	\item \textbf{Verificación:} se incluirán pruebas unitarias que verifiquen que el sistema solo es capaz de recibir datos de la forma deseada y que responda de forma controlada cuando no.
-	\item \textbf{Validación:} se realizarán pruebas de usuario donde un operador introducirá coordenadas a través de la interfaz para confirmar que el sistema acepta la orden.
+	\item Verificación: se incluirán pruebas unitarias que verifiquen que el sistema solo es capaz de recibir datos de la forma deseada y que responda de forma controlada cuando no.
+	\item Validación: se realizarán pruebas de usuario donde un operador introducirá coordenadas a través de la interfaz para confirmar que el sistema acepta la orden.
 \end{itemize}
 
-\item \textbf{Req 1.2: El sistema deberá devolver una configuración de actuadores (m1, m2, m3, m4, m5).}
+\item Req 1.2. El sistema deberá devolver una configuración de actuadores (m1, m2, m3, m4, m5).
 \begin{itemize}
-	\item \textbf{Verificación:} se incluirán pruebas unitarias que verifiquen que el sistema produce datos de la forma deseada, tanto en casos de posiciones validas como invalidas.
-	\item \textbf{Validación:} se realizarán pruebas de usuario donde un operador introducirá coordenadas a través de la interfaz para confirmar que se produce la salida esperada.
+	\item Verificación: se incluirán pruebas unitarias que verifiquen que el sistema produce datos de la forma deseada, tanto en casos de posiciones válidas como inválidas.
+	\item Validación: se realizarán pruebas de usuario en que un operador introducirá coordenadas a través de la interfaz para confirmar que se produce la salida esperada.
 \end{itemize}
 
-\item \textbf{Req 1.4: El sistema deberá indicar la certidumbre de la predicción.}
+\item Req 1.4. El sistema deberá indicar la certidumbre de la predicción.
 \begin{itemize}
-	\item \textbf{Verificación:} se implementarán pruebas unitarias para verificar que el algoritmo nunca arroja valores de certidumbre fuera del rango entre 0 y 1.
-	\item \textbf{Validación:} se realizarán pruebas de usuario donde un operador introducirá coordenadas a través de la interfaz para confirmar que se recibe la certidumbre de la salida obtenida.
+	\item Verificación: se implementarán pruebas unitarias para verificar que el algoritmo nunca arroja valores de certidumbre fuera del rango entre 0 y 1.
+	\item Validación: se realizarán pruebas de usuario en que un operador introducirá coordenadas a través de la interfaz para confirmar que se recibe la certidumbre de la salida obtenida.
 \end{itemize}
 
-\item \textbf{Req 1.5: El sistema deberá poder ser re entrenado fácilmente.}
+\item Req 1.5. El sistema deberá poder ser re entrenado fácilmente.
 \begin{itemize}
-	\item \textbf{Verificación:} se definirá claramente el \textit{pipeline} de entrenamiento y se automatizará mediante \textit{scripts} para verificar que el modelo responde sin errores al recibir nuevos conjuntos de datos.
-	\item \textbf{Validación:} se solicitará que un colega entrene el modelo con un conjunto de datos propio para luego evaluar su experiencia en el proceso.
+	\item Verificación: se definirá claramente el \textit{pipeline} de entrenamiento y se automatizará mediante \textit{scripts} para verificar que el modelo responde sin errores al recibir nuevos conjuntos de datos.
+	\item Validación: se solicitará que un colega entrene el modelo con un conjunto de datos propio para luego evaluar su experiencia en el proceso.
 \end{itemize}
 
-\item \textbf{Req 1.6: El sistema deberá tener una exactitud de al menos 3 mm.}
+\item Req 1.6. El sistema deberá tener una exactitud de al menos 3 mm.
 \begin{itemize}
-	\item \textbf{Verificación:} se ajustará el modelo usando como métrica al error medio cuadrático y se rechazarán aquellos que estén por encima del valor especificado.
-	\item \textbf{Validación:} se contrastarán salidas producidas por el sistema con el modelo de cinemática directa para evaluar su grado de exactitud.
+	\item Verificación: se verificarán las predicciones con un conjunto de datos no observados por el modelo, utilizando como métrica al error medio cuadrático.
+	\item Validación: se contrastarán salidas producidas por el sistema con el modelo de cinemática directa para evaluar su grado de exactitud.
 \end{itemize}
 
-\item \textbf{Req 3.1: Se deberá corroborar la integridad de los datos de entrenamiento.}
+\item Req 3.1. Se deberá corroborar la integridad de los datos de entrenamiento.
 \begin{itemize}
-	\item \textbf{Verificación:} se realizará un análisis exploratorio de datos para identificar posibles errores.
-	\item \textbf{Validación:} se presentará un tablero con gráficos que permitan visualmente detectar errores.
+	\item Verificación: se realizará un análisis exploratorio de datos para identificar posibles errores.
+	\item Validación: se presentará un tablero con gráficos que permitan detectar errores de manera visual.
 \end{itemize}
 
-\item \textbf{Req 4.1: La interfaz deberá mostrar el estado del robot.}
+\item Req 4.1. La interfaz deberá mostrar el estado del robot.
 \begin{itemize}
-	\item \textbf{Verificación:} se medirá la latencia desde que se emite un cambio de estado en el robot hasta que este se muestra en la interfaz, verificando que este se mantenga por debajo de los 300 ms.
-	\item \textbf{Validación:} se solicitará a un usuario que interactué con la interfaz y evalué si esta representa al robot de manera satisfactoria.
+	\item Verificación: se medirá la latencia desde que se emite un cambio de estado en el robot hasta que este se muestra en la interfaz, verificando que este se mantenga por debajo de los 300 ms.
+	\item Validación: se solicitará a un usuario que interactué con la interfaz y evalúe si esta representa al robot de manera satisfactoria.
 \end{itemize}
 
-\item \textbf{Req 5.1: El sistema deberá tener una API web.}
+\item Req 5.1. El sistema deberá tener una API web.
 \begin{itemize}
-	\item \textbf{Verificación:} se realizarán pruebas unitarias a los distintos \textit{endpoints} de la API para verificar su correctitud. 
-	\item \textbf{Validación:} se solicitará a un colega que implemente el sistema a través de la API web, utilizando solo como referencia la documentación.
+	\item Verificación: se realizarán pruebas unitarias a los distintos \textit{endpoints} de la API para verificar su correctitud. 
+	\item Validación: se solicitará a un colega que implemente el sistema a través de la API web, utilizando solo como referencia la documentación.
 \end{itemize}
 
-\item \textbf{Req 5.2: El sistema deberá tener una API Python.}
+\item Req 5.2. El sistema deberá tener una API Python.
 \begin{itemize}
-	\item \textbf{Verificación:} se estructurará el paquete según lo establecido en las normas PEP. Además se incluirán pruebas unitarias para verificar la correcta implementación.
-	\item \textbf{Validación:} se solicitará a un colega que implemente el sistema a través de la API de Python, utilizando solo como referencia la documentación.
+	\item Verificación: se estructurará el paquete según lo establecido en las normas PEP. Además se incluirán pruebas unitarias para verificar la correcta implementación.
+	\item Validación: se solicitará a un colega que implemente el sistema a través de la API de Python, utilizando solo como referencia la documentación.
 \end{itemize}
 
-\item \textbf{Req 5.3: El sistema deberá tener una API ROS2.}
+\item Req 5.3. El sistema deberá tener una API ROS2.
 \begin{itemize}
-	\item \textbf{Verificación:} se estructurará el paquete según el estándar de ROS2. Además se incluirán pruebas unitarias para verificar la correcta implementación.
-	\item \textbf{Validación:} se solicitará a un colega que implemente el sistema a través de la API de ROS2, utilizando solo como referencia la documentación.
+	\item Verificación: se estructurará el paquete según el estándar de ROS2. Además se incluirán pruebas unitarias para verificar la correcta implementación.
+	\item Validación: se solicitará a un colega que implemente el sistema a través de la API de ROS2, utilizando solo como referencia la documentación.
 \end{itemize}
 
 \end{itemize}
@@ -590,11 +591,11 @@ En esta sección se presentan los requisitos más relevantes junto a sus accione
 \label{sec:cierre}
 
 \begin{itemize}
-	\item \textbf{Revisión del plan de proyecto original:}\\
+	\item Revisión del plan de proyecto original.\\
 	 Esta tarea será llevada a cabo por el alumno y consistirá en evaluar el cronograma y la duración de tareas detalladas en el plan de proyecto, considerando su grado de similitud con la realidad. Por otro lado, se presentará una planilla donde se muestre el grado de cumplimiento de los requerimientos propuestos.
-	\item \textbf{Identificación de las técnicas y procedimientos útiles e inútiles:}\\
+	\item Identificación de las técnicas y procedimientos útiles e inútiles.\\
 	 Esta tarea será llevada a cabo por el alumno y detallará todas las alternativas implementadas a la hora de seleccionar el modelo final. Deberá registrar cada una junto a los motivos por los que se aceptó o descartó.
-	\item \textbf{Acto de agradecimiento:}\\
+	\item Acto de agradecimiento.\\
 	 Esta tarea será llevada a cabo por el alumno y tendrá lugar en el cierre de la defensa pública. Se reconocerán los aportes de cada colaborador y se les agradecerá por ello. No incurrirá en ningún gasto adicional.
 \end{itemize}
 
